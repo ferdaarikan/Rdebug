@@ -8,7 +8,7 @@ log<-function(arg){
   }
   
   diagnosticsEnv <- get("diagnosticsEnv")  
-  fcn_name = as.character( sys.call(-1))
+  fcn_name = as.character( sys.call(-1))[1]
   var_name = deparse(substitute(arg))
   cmd = paste("data[", fcn_name , ",", var_name, "]", sep="")
   
